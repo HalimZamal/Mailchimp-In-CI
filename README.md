@@ -25,14 +25,14 @@ I will explain how to integrate MailChimp with CodeIgniter framework
   
  User for select one data
 ```php
-  $config = array(
-	    'apikey' => ''      // Insert your api key
-      'secure' => FALSE   // Optional (defaults to FALSE)
+	$config = array(
+		'apikey' => ''      // Insert your api key
+		'secure' => FALSE   // Optional (defaults to FALSE)
 	);
-	$this->load->library('mcapi', $config, 'mail_chimp');
+	$this->load->library('MCAPI', $config, 'mail_chimp');
 	
 	if($this->mail_chimp->listSubscribe($list_id, $email)) {
-    // $email is now subscribed to list with id: $list_id
-  }
+		// $email is now subscribed to list with id: $list_id
+	}
 	
 ```
